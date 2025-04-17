@@ -60,7 +60,7 @@ const Product = () => {
     <div>
       <section className="post-section">
         <div className="post-section-wrapper">
-          <div className="2xl:container mx-auto p-10">
+          <div className="2xl:container mx-auto p-5">
             <div className="add-posts p-10 w-[50%] md:w-[75%] max-sm:w-full mx-auto">
               <form action="" onSubmit={handleFormSubmit}>
                 <div className="mb-5">
@@ -115,7 +115,7 @@ const Product = () => {
                 allPosts.map((post) => (
                   <div key={post.id} className=" border-1 rounded p-5">
                     <Link href={`/posts/${post.id}`}>
-                      <div className="h-[230px] max-sm:h-[350px]">
+                      <div className="h-[230px] max-sm:h-auto">
                         <div className="title mb-2">
                           <h3>{post.title}</h3>
                         </div>
@@ -124,7 +124,7 @@ const Product = () => {
                         </div>
                       </div>
                     </Link>
-                    <div className="mb-5 flex justify-center gap-4">
+                    <div className="mb-5 flex max-sm:mt-5 justify-center gap-4">
                       <button
                         onClick={() => editData(post)}
                         type="submit"
