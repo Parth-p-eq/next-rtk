@@ -110,12 +110,12 @@ const Product = () => {
                 </button>
               </div>
             </div>
-            <div className="all-posts grid lg:grid-cols-4 md:grid-cols-3 max-sm:grid-cols-1 gap-5">
+            <div className="all-posts grid lg:grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1 gap-5">
               {allPosts &&
                 allPosts.map((post) => (
                   <div key={post.id} className=" border-1 rounded p-5">
                     <Link href={`/posts/${post.id}`}>
-                      <div className="h-[220px]">
+                      <div className="h-[230px]">
                         <div className="title mb-2">
                           <h3>{post.title}</h3>
                         </div>
