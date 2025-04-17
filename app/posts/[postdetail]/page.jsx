@@ -1,5 +1,5 @@
 // app/posts/[postdetail]/page.jsx (Server Component — NO "use client")
-import PostDetail from "./Posedetail";
+import PostDetail from "./Postdetail";
 
 export default function Page({ params }) {
   return <PostDetail params={params} />;

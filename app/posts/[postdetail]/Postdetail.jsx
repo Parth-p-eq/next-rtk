@@ -102,7 +102,7 @@ const PostDetail = ({ params }) => {
 
   return (
     <div className="py-5 h-[100vh] flex items-center">
-      <div className="h-[220px] w-md mx-auto border-1 rounded p-5">
+      <div className="h-[220px] w-md max-sm:w-[290px] mx-auto border-1 rounded p-5">
         <div className="title mb-2">
           <h2>{data.id}</h2>
         </div>

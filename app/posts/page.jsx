@@ -61,7 +61,7 @@ const Product = () => {
       <section className="post-section">
         <div className="post-section-wrapper">
           <div className="2xl:container mx-auto p-10">
-            <div className="add-posts p-10 w-[50%] mx-auto">
+            <div className="add-posts p-10 w-[50%] md:w-[75%] max-sm:w-full mx-auto">
               <form action="" onSubmit={handleFormSubmit}>
                 <div className="mb-5">
                   <input
@@ -115,7 +115,7 @@ const Product = () => {
                 allPosts.map((post) => (
                   <div key={post.id} className=" border-1 rounded p-5">
                     <Link href={`/posts/${post.id}`}>
-                      <div className="h-[230px]">
+                      <div className="h-[230px] max-sm:h-[350px]">
                         <div className="title mb-2">
                           <h3>{post.title}</h3>
                         </div>
@@ -151,4 +151,3 @@ const Product = () => {
 };
 
 export default Product;
-
