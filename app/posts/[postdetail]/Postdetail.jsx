@@ -106,7 +106,7 @@ const PostDetail = ({ params }) => {
         <div className="title mb-2">
           <h2>{data.id}</h2>
         </div>
-        <div className="title mb-2">
+        <div cl assName="title mb-2">
           <h3>{data.title}</h3>
         </div>
         <div className="body">
@@ -119,9 +119,9 @@ const PostDetail = ({ params }) => {
 
 export default PostDetail;
 
-// export const generateStaticParams = async () => {
-//   const post = await ServerPosts();
-//   return post.map((item) => ({
-//     postdetail: item.id.toString(),
-//   }));
-// };
+export const generateStaticParams = async () => {
+  const post = await ServerPosts();
+  return post.map((item) => ({
+    postdetail: item.id.toString(),
+  }));
+};
