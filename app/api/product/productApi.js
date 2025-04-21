@@ -15,10 +15,6 @@ export const productApi = createApi({
       }),
       invalidatesTags: ["Cart"],
     }),
-    getCart: builder.query({
-      query: () => "carts/1", // dummyjson has cart with id
-      providesTags: ["Cart"],
-    }),
     detailProduct: builder.query({
       query: (id) => ({
         url: `products/${id}`,
@@ -32,5 +28,4 @@ export const {
   useGetProductQuery,
   useAddToCartProductMutation,
   useDetailProductQuery,
-  useGetCartQuery,
 } = productApi;

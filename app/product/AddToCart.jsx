@@ -2,21 +2,17 @@
 
 const AddToCart = ({ id }) => {
   const handleClick = () => {
-    // Get current cart from localStorage
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Check if the product is already in the cart
     const itemExists = existingCart.find((item) => item.id === id);
 
     let updatedCart;
     if (itemExists) {
-      // Increase quantity if already exists
       updatedCart = existingCart.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === id ? { ...item } : item
       );
     } else {
-      // Add new product with quantity 1
-      updatedCart = [...existingCart, { id, quantity: 1 }];
+      updatedCart = [...existingCart, { id }];
     }
 
     localStorage.setItem("cart", JSON.stringify(updatedCart));

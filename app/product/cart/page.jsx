@@ -103,15 +103,14 @@ const Cart = () => {
     );
 
   const productsInCart = cartItems.map((item) => {
-    const product = allProducts?.find((p) => p.id === item.id);
+    const product = allProducts?.find((product) => product.id === item.id);
     return {
       ...product,
-      quantity: item.quantity,
     };
   });
 
-  const handleRemoveFromCart = (idToRemove) => {
-    const updatedItems = cartItems.filter((item) => item.id !== idToRemove);
+  const handleRemoveFromCart = (id) => {
+    const updatedItems = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedItems);
     localStorage.setItem("cart", JSON.stringify(updatedItems));
   };
@@ -120,15 +119,12 @@ const Cart = () => {
     <section className="productlist-section ">
       <div className="productlist-wrapper">
         <div className="2xl:container mx-auto py-10 2xl:px-30 lg:px-15 md:px-6 max-sm:px-6">
-          <div className="cart-page p-5">
-            {/* <h2 className="text-xl font-bold mb-4 py-10 text-center">
-              Your Cart
-            </h2> */}
+          <div className="cart-page">
             {productsInCart.length === 0 ? (
               <div className=" flex justify-center items-center">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg"
-                //   className="w-full h-auto"
+                  //   className="w-full h-auto"
                   alt=""
                 />
               </div>
